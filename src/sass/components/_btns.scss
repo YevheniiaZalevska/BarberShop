@@ -1,0 +1,120 @@
+.btn {
+    padding: 12px 20px;
+    max-width: 200px;
+    min-width: 160px;
+    min-height: 40px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.09em;
+    @include lh(16, 12, 12px);
+    text-transform: uppercase;
+
+    border: 1px solid getColor(accent);
+    border-radius: 25px;
+    background-color: transparent;
+    cursor: pointer;
+
+    transition: color getProperty(time) getProperty(cubic),
+        background-color getProperty(time) getProperty(cubic);
+
+    &:hover,
+    &:focus {
+        color: getColor(secondary);
+        background-color: getColor(accent);
+    }
+}
+
+.btn-mode-light {
+    color: getColor(primary);
+}
+
+.btn-mode-dark {
+    color: getColor(secondary);
+}
+
+.slider-btn {
+    width: 60px;
+    height: 24px;
+    padding: 0;
+
+    font-weight: 600;
+    text-align: right;
+    letter-spacing: 0.1em;
+
+    color: getColor(secondary);
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid getColor(secondary);
+    cursor: pointer;
+}
+
+.slider-btn-disable {
+    margin-right: 26px;
+
+    color: getColor(btn-dis);
+    border-color: getColor(btn-dis);
+}
+
+.list-button {
+    position: absolute;
+    right: 0;
+    bottom: -40%;
+}
+
+.modal-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid getColor(accent);
+    background-color: transparent;
+}
+
+.btn-mob {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: getSize(tablet)) {
+        display: inline-block;
+        margin: 0;
+    }
+}
+
+.btn-desk {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.header__btn {
+    animation: swing 6s ease-in-out infinite forwards;
+    color: getColor(primary);
+
+    @media screen and (min-width: getSize(desktop)) {
+        color: getColor(secondary);
+    }
+}
+
+.modal-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+
+    border: 1px solid getColor(accent);
+    border-radius: 50%;
+    background-color: transparent;
+
+    cursor: pointer;
+}

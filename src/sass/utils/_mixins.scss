@@ -1,0 +1,65 @@
+@mixin bpoint($point) {
+    @if $point ==wmobile {
+        @media only screen and (max-width: 319.98px) {
+            width: 100%;
+            padding: 0 15px;
+        }
+    }
+
+    @else if $point ==mobile {
+        @media only screen and (min-width: 320px) {
+            min-width: getSize(mobile);
+            padding: 0 20px;
+        }
+    }
+
+    @else if $point ==tablet {
+        @media only screen and (min-width: 768px) {
+            width: getSize(tablet);
+            padding: 0 32px;
+        }
+    }
+
+    @else if $point ==desktop {
+        @media only screen and (min-width: 1280px) {
+            width: getSize(desktop);
+            padding: 0 55px;
+        }
+    }
+}
+
+@mixin sectionpadd($point) {
+    @if $point ==wmobile {
+        @media only screen and (max-width: 319.98px) {
+            padding: 64px 0;
+        }
+    }
+
+    @else if $point ==mobile {
+        @media only screen and (min-width: 320px) {
+            padding: 84px 0;
+        }
+    }
+
+    @else if $point ==tablet {
+        @media only screen and (min-width: 768px) {
+            padding: 100px 0;
+        }
+    }
+
+    @else if $point ==desktop {
+        @media only screen and (min-width: 1280px) {
+            padding: 130px 0;
+        }
+    }
+}
+
+@mixin Btn($width, $height) {
+    width: getBtnW($width);
+    height: getBtnH($height);
+}
+
+@mixin lh($line-height, $font-size, $size) {
+    line-height: calc($line-height / $font-size);
+    font-size: $size;
+}

@@ -1,0 +1,67 @@
+%list {
+    list-style: none;
+}
+
+%link {
+    text-decoration: none;
+    color: currentColor;
+}
+
+%main-title {
+    font-family: getFont(accent);
+    font-weight: 700;
+    @include lh(56, 40, 40px);
+    letter-spacing: 0.05em;
+    color: getColor(secondary);
+    margin-bottom: 20px;
+
+    @media screen and (min-width: getSize(tablet)) {
+        @include lh(56, 48, 48px);
+    }
+
+    @media screen and (min-width: getSize(desktop)) {
+        @include lh(85, 72, 72px);
+    }
+}
+
+%title {
+    font-family: getFont(accent);
+    font-weight: 700;
+    @include lh(33, 28, 28px);
+    letter-spacing: 0.05em;
+    margin-bottom: 44px;
+
+    @media screen and (min-width: getSize(desktop)) {
+        @include lh(49, 42, 42px);
+    }
+}
+
+%uppertitle {
+    font-weight: 600;
+    @include lh(15, 11, 11px);
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    &::before {
+        content: '';
+        margin-right: 20px;
+        display: block;
+        width: 60px;
+        height: 1px;
+        background-color: getColor(uppert);
+    }
+
+}
+
+%subtitle {
+    @include lh(26, 16, 16px);
+    color: getColor(thirth);
+    margin-bottom: 20px;
+
+    @media screen and (min-width: getSize(desktop)) {
+        @include lh(30, 18, 18px);
+    }
+}

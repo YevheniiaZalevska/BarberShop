@@ -1,0 +1,19 @@
+@import './utils/vars';
+@import './utils/mixins';
+@import './utils/placeholders';
+@import './utils/visually-hidden';
+
+@import './base/container';
+@import './base/common';
+@import './base/animations';
+@import './base/reset';
+
+@import './components/bcg-img';
+@import './components/btns';
+@import './components/menu';
+@import './components/modal';
+@import './components/scroll';
+@import './components/slider';
+@import './components/socials';
+
+@import './layouts/header';
