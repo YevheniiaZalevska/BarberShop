@@ -2,127 +2,293 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/BarberShop/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <meta
+      name="description"
+      content="Лучший барбершоп города. Борбершоп Киев. Салон барбершоп. Модная стрижка. Уход за бородой. Уход за усами. Мужская стрижка. Стрижка бороды. Модные мужские стрижки. Бритье опасной бритвой. Стрижка у стажера. Стрижка под насадку. Детская стрижка. Камуфлирование седины. Лучшие мастера Киева. John Smith. Michele Doe. Alan Black. Extreme barber."
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./sr/images/man-icon.png"
+    />
+    <title>BarberShop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>BarberShop</title>
+    <link rel="stylesheet" href="./src/sass/index.scss" />
     <script type="module" crossorigin src="/BarberShop/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/BarberShop/assets/styles-DvPDDfy5.css">
   </head>
   <body>
-    <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="/BarberShop/assets/sprite-E8vg0sBb.svg#logo"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
+    <!-- header -->
 
-
-    <main>
-      <!-- Loads the specified .html file -->
-      <section class="vite-promo">
-  <div class="container">
-    <div class="vite-promo-thumb">
-      <a
-        class="vite-promo-link"
-        href="https://vitejs.dev/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Link to Vite official website"
-        title="Vite.js  build tool"
-      >
-        <!-- Path to images as from index.html file -->
-        <img
-          class="pic"
-          src="/BarberShop/assets/vite-logo-9o_aqrTe.png"
-          alt="Vite logo"
-          width="640"
-          height="640"
-        />
-      </a>
-    </div>
-    <h1 class="main-title">
-      <span class="main-title-gradient">Vite</span>
-      Template by
-      <a
-        class="main-title-link"
-        href="https://github.com/goitacademy/vanilla-app-template"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT
-      </a>
-    </h1>
-  </div>
-</section>
-
-      <article class="badges">
-  <div class="container">
-    <ul class="badges-list">
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-html-inject"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          HTML Inject
+    <header class="header" id="header">
+      <div class="container header__container">
+        <a class="logo" href="#" aria-label="Логотип сайту BarberShop">
+          <svg class="logo" width="70" height="56">
+            <use href="./src/images/logo.svg#logo"></use>
+          </svg>
         </a>
-      </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-full-reload"
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          type="button"
+          aria-label="side menu open"
+          class="nav-menu__button-burger"
+          aria-expanded="false"
+          aria-controls="side-menu"
+          data-menu-button
         >
-          Full Reload
-        </a>
-      </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/postcss-sort-media-queries"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Sort Media Queries
-        </a>
-      </li>
-    </ul>
-  </div>
-</article>
+          <svg width="24" height="16">
+            <use href="./src/images/symbol-defs.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <div class="menu__overlay"></div>
+        <div class="menu__container" id="side-menu" data-menu>
+          <button
+            type="button"
+            aria-label="side menu close"
+            class="menu__button-close"
+            aria-expanded="false"
+            aria-controls="side-menu"
+            data-menu-button
+          >
+            <svg width="24" height="16">
+              <use
+                class="menu__icon-close"
+                href="./src/images/symbol-defs2.svg#icon-close"
+              ></use>
+            </svg>
+          </button>
+          <nav class="navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a
+                  class="navigation__link navigation__link--current"
+                  href="#about"
+                >
+                  About
+                </a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#price"
+                  >Services and Prices</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#team">Barbers</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#contacts">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__group">
+            <a class="header__phone" href="tel:+380441111111">
+              +38 044 111 11 11
+            </a>
+            <button
+              class="btn header__btn js-open-modal"
+              type="button"
+              data-modal="1"
+            >
+              book a Service
+            </button>
+          </div>
+          <ul class="socials__list header--socials">
+            <li class="socials__item">
+              <a
+                class="socials__link"
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Instagram</a
+              >
+            </li>
+            <li class="socials__item">
+              <a
+                class="socials__link"
+                href="https://www.youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Youtube</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="overlay js-overlay-modal"></div>
+        <div class="modal modal-wrapper" data-modal="1">
+          <button class="modal-btn js-modal-close">
+            <svg class="icon" width="20" height="20">
+              <use href="./src/images/symbol-defs2.svg#icon-close"></use>
+            </svg>
+          </button>
+          <strong class="modal__title">Leave your contacts</strong>
+          <form class="modal__form">
+            <label class="modal-form__group">
+              <span class="modal-form__label">Имя</span>
+              <input
+                class="modal-form__input"
+                type="text"
+                name="user-name"
+                minlength="3"
+                placeholder="&nbsp;"
+                required
+              />
+              <span class="alert alert--warning">
+                Имя должно состоять минимум из 3 символов
+              </span>
+              <svg
+                class="alert-icon alert-icon--warning"
+                width="18"
+                height="18"
+              >
+                <use href="./src/images/symbol-defs3.svg#icon-warning"></use>
+              </svg>
+              <span class="alert alert--error">
+                Вы ввели не корректные данные
+              </span>
+              <svg class="alert-icon alert-icon--error" width="18" height="18">
+                <use href="./src/images/symbol-defs3.svg#icon-sad-face"></use>
+              </svg>
+              <svg class="modal-form__icon" width="20" height="20">
+                <use href="./src/images/symbol-defs3.svg#icon-user"></use>
+              </svg>
+            </label>
+            <label class="modal-form__group">
+              <span class="modal-form__label">Телефон</span>
+              <input
+                class="modal-form__input"
+                type="tel"
+                minlength="10"
+                name="user-phone"
+                placeholder="&nbsp;"
+                required
+              />
+              <span class="alert alert--warning">
+                Введите номер телефона в формате +38 099 123 45 67
+              </span>
+              <svg
+                class="alert-icon alert-icon--warning"
+                width="15"
+                height="15"
+              >
+                <use href="./src/images/symbol-defs3.svg#icon-warning"></use>
+              </svg>
+              <span class="alert alert--error">
+                Вы ввели не корректные данные
+              </span>
+              <svg class="alert-icon alert-icon--error" width="15" height="15">
+                <use href="./src/images/symbol-defs3.svg#icon-sad-face"></use>
+              </svg>
+              <svg class="modal-form__icon" width="20" height="20">
+                <use href="./src/images/symbol-defs3.svg#icon-phone"></use>
+              </svg>
+            </label>
+            <label class="modal-form__group">
+              <span class="modal-form__label">Почта</span>
+              <input
+                class="modal-form__input"
+                type="email"
+                name="user-mail"
+                placeholder="&nbsp;"
+                required
+              />
+              <span class="alert alert--warning">
+                Введите почту в формате example@mail.com
+              </span>
+              <svg
+                class="alert-icon alert-icon--warning"
+                width="15"
+                height="15"
+              >
+                <use href="./src/images/symbol-defs3.svg#icon-warning"></use>
+              </svg>
+              <span class="alert alert--error">
+                Вы ввели не корректные данные
+              </span>
+              <svg class="alert-icon alert-icon--error" width="15" height="15">
+                <use href="./src/images/symbol-defs3.svg#icon-sad-face"></use>
+              </svg>
+              <svg class="modal-form__icon" width="20" height="20">
+                <use href="./src/images/symbol-defs3.svg#icon-mail"></use>
+              </svg>
+            </label>
+            <p class="modal-form__subtitle">Виберите форму оплаты</p>
+            <div class="modal-form__pay-type">
+              <label class="modal-form__pay-group">
+                <input
+                  class="modal-form__pay-checkbox visually-hidden"
+                  type="radio"
+                  name="user-pay"
+                  checked
+                />
+                <svg class="modal-form__pay-option" width="50" height="50">
+                  <use
+                    href="./src/images/symbol-defs3.svg#icom-credit-card"
+                  ></use>
+                </svg>
+              </label>
 
-    </main>
-
-    <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
-  </div>
-</footer>
-
+              <label class="modal-form__pay-group">
+                <input
+                  class="modal-form__pay-checkbox visually-hidden"
+                  type="radio"
+                  name="user-pay"
+                />
+                <svg class="modal-form__pay-option" width="50" height="50">
+                  <use href="./src/images/symbol-defs3.svg#banknote"></use>
+                </svg>
+              </label>
+            </div>
+            <label class="modal-form__policy-group">
+              <input
+                class="modal-form__checkbox visually-hidden"
+                type="checkbox"
+                tabindex="-1"
+                id="chk1-label"
+                data-modal-checkbox
+                checked
+              />
+              <span
+                class="modal-form__custom-checkbox"
+                tabindex="0"
+                role="checkbox"
+                aria-checked="true"
+                aria-labelledby="chk1-label"
+              >
+                <svg
+                  class="modal-form__custom-checkbox-icon"
+                  width="18"
+                  height="18"
+                >
+                  <use
+                    href="./src/images/symbol-defs3.svg#icon-checkbox-checked"
+                  ></use>
+                </svg>
+              </span>
+              <span class="modal-form__policy-desc">
+                Соглашаюсь с
+                <a class="modal-form__policy-link" href="#">
+                  Политикой использования </a
+                >данных
+              </span>
+            </label>
+            <button
+              class="btn btn--mode-light btn-desk"
+              type="submit"
+              data-submit-btn
+            >
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
 
   </body>
 </html>
