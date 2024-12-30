@@ -1,0 +1,154 @@
+ .header__container {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding-top: 20px;
+
+     @media screen and (max-width: 767.98px) {
+         max-width: 480px;
+         margin-right: auto;
+         margin-left: auto;
+     }
+ }
+
+ .logo {
+     fill: getColor(secondary);
+     margin: 0;
+     display: block;
+     transition: fill getProperty(time) getProperty(cubic);
+
+     @media screen and (min-width: getSize(tablet)) {
+         fill: getColor(primary);
+
+     }
+
+     @media screen and (min-width: getSize(desktop)) {
+         margin-right: 71px;
+
+         &:hover {
+             fill: getColor(accent);
+         }
+     }
+ }
+
+ .navigation__list {
+     @extend %list;
+     display: inline-block;
+     margin-bottom: 40px;
+
+     @media screen and (min-width: getSize(desktop)) {
+         display: flex;
+         align-items: center;
+         @include lh(15, 12, 12px);
+         margin-bottom: 0;
+     }
+ }
+
+ .navigation__item {
+     margin-bottom: 20px;
+
+     &:last-child {
+         margin-bottom: 0;
+     }
+
+     @media screen and (min-width: getSize(desktop)) {
+         margin-right: 40px;
+         margin-bottom: 0;
+
+         &:last-child {
+             margin-right: 0;
+         }
+     }
+ }
+
+ .navigation__link {
+     position: relative;
+     display: block;
+
+     padding-top: 10px;
+     padding-bottom: 10px;
+
+
+     font-weight: 600;
+     @include lh(25, 18, 18px);
+     letter-spacing: 0.1em;
+     color: getColor(primary);
+
+     @extend %link;
+     transition: color getProperty(time) getProperty(cubic);
+
+     &:hover,
+     &:focus {
+         color: getColor(accent);
+     }
+
+     @media screen and (min-width: getSize(desktop)) {
+         @include lh(15, 12, 12px);
+         color: getColor(secondary);
+     }
+ }
+
+ .navigation__link--current {
+     color: getColor(accent);
+
+     &::after {
+         position: absolute;
+         bottom: 0;
+         left: 0;
+
+         content: '';
+         display: block;
+         width: 100%;
+         height: 2px;
+
+         background-color: getColor(accent);
+     }
+ }
+
+ .header__group {
+     margin-bottom: 40px;
+
+     @media screen and (min-width: getSize(desktop)) {
+         display: flex;
+         align-items: center;
+         margin-left: auto;
+         margin-bottom: 0;
+     }
+ }
+
+ .header__phone {
+     display: block;
+
+     padding-top: 10px;
+     padding-bottom: 10px;
+     margin-bottom: 20px;
+     font-weight: 600;
+     @include lh(25, 18, 18px);
+
+     letter-spacing: 0.1em;
+
+     color: getColor(primary);
+     transition: color getProperty(time) getProperty(cubic);
+
+     &:hover,
+     &:focus {
+         color: getColor(accent);
+     }
+
+
+     @media screen and (min-width: getSize(desktop)) {
+         color: getColor(secondary);
+         @include lh(15, 12, 12px);
+         margin-right: 40px;
+         margin-bottom: 0;
+     }
+ }
+
+ .header--socials {
+     margin-bottom: 40px;
+     margin-left: 0;
+
+     @media screen and (min-width: getSize(desktop)) {
+         display: none;
+     }
+ }
