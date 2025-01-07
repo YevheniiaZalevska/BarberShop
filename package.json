@@ -14,7 +14,7 @@
     "watch": "npm-run-all --parallel watch:*",
     "serve": "browser-sync start --server dist --files dist",
     "start": "npm-run-all --parallel watch serve",
-    "build": "npm-run-all copy:html build:* copy:css",
+    "build": "BarberShop",
     "postbuild": "postcss dist/css/*.css -u autoprefixer cssnano -r --no-map"
   },
   "dependencies": {
