@@ -1,0 +1,14 @@
+.container {
+    margin: 0 auto;
+    @include bpoint(wmobile);
+    @include bpoint(mobile);
+    @include bpoint(tablet);
+    @include bpoint(desktop);
+}
+
+.section {
+    @include sectionpadd(wmobile);
+    @include sectionpadd(mobile);
+    @include sectionpadd(tablet);
+    @include sectionpadd(desktop);
+}
