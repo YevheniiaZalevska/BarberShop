@@ -1,0 +1,100 @@
+$colors: (
+    'primary': #303030,
+    'secondary': #ffffff,
+    'thirth': #555555,
+    'accent': #ff6c00,
+    'uppert': #111319,
+
+    'primary-bcg': #ffffff,
+    'secondary-bcg': #f7f7f7,
+    'backdrop': rgba(255, 255, 255, 0.3),
+    'back-modal': rgba(0, 0, 0, 0.3),
+    'dark-bcg': #191c26,
+    'gall-bcg':rgba(0, 0, 0, 0.5),
+
+    'logo':#c4c4c4,
+    'text-price-contacts-color': #9da4bd,
+
+    'header-fix-bcg': rgba(25, 28, 38, 0.2),
+    'btn-dis': rgba(157, 164, 189, 0.6),
+    'text-shadow': rgba(171, 129, 108, 0.15),
+    'cont-form': rgba(157, 164, 189, 0.4),
+
+
+    // modal
+    'error':#e22f37,
+    'valid':#69e883,
+    'warning':#ffc039,
+
+);
+
+
+$items: 1;
+$indent: 30px;
+
+$shadows: (
+    'card': 0px 8px 30px rgba(212, 20, 67, 0.1),
+    'btn': 0px 6px 5px rgba(0, 0, 0, 0.29),
+    'box': 0px 4px 4px rgb(0 0 0 / 25%),
+);
+
+$properties: (
+    'cubic': cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    'time': 300ms,
+);
+
+$fonts: (
+    'basic': ('Open Sans', sans-serif),
+    'accent': ('Raleway', sans-serif),
+);
+
+$breakpoints: (
+    'wmobile':319.98px,
+    'mobile': 320px,
+    'tablet': 768px,
+    'wdesktop': 1279.98px,
+    'desktop': 1280px,
+);
+
+// Colors
+@function getColor($key) {
+    @return map-get($colors, $key);
+}
+
+// Shadows
+@function getShadow($key) {
+    @return map-get($shadows, $key);
+}
+
+// Properties
+@function getProperty($key) {
+    @return map-get($properties, $key);
+}
+
+// Fonts
+@function getFont($key) {
+    @return map-get($fonts, $key);
+}
+
+// Breakpoints
+@function getSize($key) {
+    @return map-get($breakpoints, $key);
+}
+
+$btnW: (
+    'mobile': 145px,
+    'desktop': 158px,
+);
+
+@function getBtnW($key) {
+    @return map-get($btnW, $key);
+}
+
+$btnH: (
+    'mobile': 40px,
+    'desktop': 45px,
+);
+
+@function getBtnH($key) {
+    @return map-get($btnH, $key);
+}

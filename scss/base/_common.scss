@@ -1,0 +1,26 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+body {
+    font-style: normal;
+    font-family: getFont(basic);
+
+    @include lh(26, 14, 14px);
+    letter-spacing: 0.02em;
+
+    background-color: getColor(primary-bcg);
+    color: getColor(primary);
+
+    @media screen and (min-width: getSize(desktop)) {
+        @include lh(30, 18, 18px);
+    }
+}
+
+body {
+
+    &.is-menu-shown,
+    &.modal-open,
+    &.is-open {
+        overflow: hidden;
+    }
+
+}

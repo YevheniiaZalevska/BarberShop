@@ -1,0 +1,27 @@
+.footer {
+    padding-top: 44px;
+    padding-bottom: 44px;
+    background-color: getColor(secondary-bcg);
+
+    @media screen and (min-width: getSize(tablet)) {
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column-reverse;
+
+
+    @media screen and (min-width: getSize(tablet)) {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.footer__copyright {
+    font-weight: 600;
+    @include lh(15, 11, 11px);
+    color: getColor(text-price-contacts-color);
+}

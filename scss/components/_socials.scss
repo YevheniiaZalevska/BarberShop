@@ -1,0 +1,75 @@
+.socials__list--icons {
+    @extend %list;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.socials__item--icons:not(:last-child) {
+    margin-right: 10px;
+}
+
+.socials__link--icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    background-color: getColor(secondary);
+
+    &:hover .socials__icon,
+    &:focus .socials__icon {
+        fill: getColor(accent);
+    }
+}
+
+.socials__icon {
+    transition: fill getProperty(time) getProperty(cubic);
+    fill: getColor(primary);
+}
+
+.socials__list {
+    margin-bottom: 21px;
+    margin-left: auto;
+
+    @extend %list;
+    display: flex;
+    align-items: center;
+
+    font-weight: 600;
+    @include lh(15, 11, 11px);
+
+    @media screen and (min-width: getSize(tablet)) {
+        margin-bottom: 0;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        margin-right: 40px;
+        width: 60px;
+        height: 1px;
+        background-color: getColor(primary)
+    }
+}
+
+
+.socials__item {
+    margin-right: 40px;
+    padding: 5px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.socials__link {
+    transition: color getProperty(time) getProperty(cubic);
+
+    &:hover,
+    &:focus {
+        color: getColor(accent);
+    }
+}

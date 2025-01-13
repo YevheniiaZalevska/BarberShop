@@ -1,0 +1,153 @@
+.benefits__container {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @media screen and (min-width: getSize(desktop)) {
+        justify-content: center;
+        flex-direction: row;
+        min-height: 322px;
+    }
+}
+
+.benefits__list {
+    @extend %list;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -15px;
+    display: flex;
+    position: relative;
+
+    @media screen and (min-width: getSize(tablet)) {
+        justify-content: right;
+    }
+
+    @media screen and (min-width: getSize(desktop)) {
+        width: 378px;
+        justify-content: center;
+        margin: 0 130px 0 0;
+    }
+}
+
+
+.benefits__item {
+    flex-basis: calc((100% - 60px) / 2);
+    padding: 20px 24px;
+    max-width: 225px;
+    max-height: 133px;
+    text-align: center;
+    margin: 15px;
+    background-color: getColor(secondary-bcg);
+
+    @media screen and (min-width: getSize(desktop)) {
+        max-width: 185px;
+    }
+
+}
+
+.item-600 {
+    margin-bottom: 30px;
+
+    @media screen and (min-width: getSize(desktop)) {
+        position: absolute;
+        margin: 0;
+        left: 0;
+    }
+}
+
+.item-20 {
+    margin-top: 40px;
+
+    @media screen and (min-width: getSize(desktop)) {
+        position: absolute;
+        bottom: 10%;
+        left: 0;
+        margin: 0;
+    }
+}
+
+.item-50 {
+
+    @media screen and (min-width: getSize(desktop)) {
+        position: absolute;
+        top: 10%;
+        left: 55%;
+        margin: 0;
+    }
+}
+
+.item-100 {
+    margin-top: 40px;
+
+    @media screen and (min-width: getSize(desktop)) {
+        position: absolute;
+        bottom: 0;
+        left: 55%;
+        margin: 0;
+    }
+}
+
+
+.benefits__amount {
+    font-size: 24px;
+    margin-bottom: 6px;
+    font-weight: 700;
+
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    @media screen and (min-width: 380px) {
+        font-size: 42px;
+    }
+
+}
+
+.benefits__amount-decor {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.38;
+    text-align: center;
+
+    color: getColor(accent);
+}
+
+.benefits__text {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+}
+
+.benefits__group {
+    max-width: 450px;
+    margin: auto auto 44px;
+
+    @media screen and (min-width: getSize(tablet)) {
+        text-align: left;
+        margin: 0 0 44px;
+    }
+
+    @media screen and (min-width: getSize(desktop)) {
+        max-width: 500px;
+        margin: 0;
+    }
+}
+
+.benefits__uppertitle {
+    @extend %uppertitle;
+}
+
+.benefits__title {
+    @extend %title;
+
+    @media screen and (min-width: getSize(tablet)) {
+        width: 300px;
+    }
+}
+
+.benefits__subtitle {
+    font-size: 18px;
+    line-height: 1.67;
+    color: getColor(thirth);
+}

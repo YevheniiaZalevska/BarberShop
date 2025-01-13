@@ -1,0 +1,25 @@
+@import './utilities/mixins';
+@import './utilities/placeholders';
+@import './utilities/vars';
+@import './utilities/visually-hidden';
+
+@import './base/animations';
+@import './base/common';
+@import './base/container';
+@import './base/resets';
+
+@import './components/bcg-img';
+@import './components/btns';
+@import './components/menu';
+@import './components/modal';
+@import './components/scroll';
+@import './components/socials';
+
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/about';
+@import './layouts/price';
+@import './layouts/benefits';
+@import './layouts/team';
+@import './layouts/contacts';
+@import './layouts/footer';

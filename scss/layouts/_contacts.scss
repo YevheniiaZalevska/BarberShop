@@ -1,0 +1,226 @@
+.contacts__container {
+    @media screen and (max-width: 767.98px) {
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media screen and (min-width: getSize(desktop)) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.contacts__form {
+    padding-bottom: 84px;
+
+    @media screen and (min-width: getSize(tablet)) {
+        padding-bottom: 100px;
+    }
+
+    @media screen and (min-width: getSize(desktop)) {
+        padding: 0;
+    }
+}
+
+.contacts__title {
+    font-family: getFont(accent);
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.16;
+    letter-spacing: 0.05em;
+
+    color: getColor(secondary);
+    margin-bottom: 44px;
+    text-align: center;
+
+    @media screen and (min-width: getSize(tablet)) {
+        text-align: left;
+    }
+}
+
+.contacts__left--side {
+    @media screen and (min-width: getSize(desktop)) {
+        max-width: 570px;
+    }
+}
+
+.contacts__form--wrapper {
+    @media screen and (min-width: getSize(tablet)) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.contacts__form--group {
+    position: relative;
+    padding-top: 20px;
+
+    @media screen and (min-width: getSize(tablet)) {
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+}
+
+.contacts__form--label {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+    display: block;
+    font-weight: 600;
+    @include lh(15, 11, 11px);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: getColor(cont-form);
+    transform: translateY(20px);
+    transition: transform getProperty(time) ease;
+
+}
+
+.contacts__form--input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 44px;
+    outline: transparent;
+    color: getColor(secondary);
+
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid getColor(cont-form);
+
+    @media screen and (min-width: getSize(tablet)) {
+        width: 330px;
+    }
+
+    @media screen and (min-width: getSize(desktop)) {
+        max-width: 260px;
+    }
+
+    &:focus,
+    &:not(:placeholder-shown) {
+        border-bottom: 1px solid getColor(secondary);
+    }
+
+    &::placeholder {
+        opacity: 0;
+        transition: opacity getProperty(time) ease;
+    }
+
+    &:focus::placeholder {
+        opacity: 1;
+    }
+}
+
+.contacts__form--input:focus+.contacts__form--label,
+.contacts__form--input:not(:placeholder-shown)+.contacts__form--label {
+    transform: translateY(0);
+    color: getColor(secondary);
+}
+
+.contacts__form-message--group {
+    position: relative;
+    display: block;
+    padding-top: 30px;
+    width: 100%;
+    margin-bottom: 44px;
+}
+
+.contacts__form--message {
+    width: 100%;
+
+    color: getColor(secondary);
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid getColor(cont-form);
+    resize: none;
+    outline: transparent;
+    transition: border-color getProperty(time) ease;
+
+    &::placeholder {
+        opacity: 0;
+    }
+
+    &:focus,
+    &:not(:placeholder-shown) {
+        border-bottom: 1px solid getColor(secondary);
+    }
+}
+
+.contacts__form--message:focus+.contacts__form--label,
+.contacts__form--message:not(:placeholder-shown)+.contacts__form--label {
+    color: getColor(secondary);
+    transform: translateY(0);
+}
+
+.contacts__rigth--side {
+    padding-top: 84px;
+
+    @media screen and (min-width: getSize(tablet)) {
+        padding-top: 100px;
+    }
+
+    @media screen and (min-width: getSize(desktop)) {
+        width: 460px;
+        padding: 0;
+    }
+}
+
+.contacts__rigth--container {
+    @media screen and (min-width: getSize(tablet)) and (max-width: getSize(wdesktop)) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.contacts__list {
+    margin-bottom: 70px;
+    @extend %list;
+}
+
+.contacts__link {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    line-height: 1.67;
+    color: getColor(text-price-contacts-color);
+
+}
+
+.contacts__icon {
+    margin-right: 16px;
+}
+
+
+.contacts__item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.contacts__time {
+    margin-bottom: 20px;
+
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: getColor(secondary);
+
+    &::before {
+        content: '';
+        display: inline-block;
+        margin-right: 20px;
+        width: 60px;
+        height: 1px;
+        background-color: getColor(cont-form);
+    }
+}
+
+.contacts__time--day {
+    font-size: 18px;
+    line-height: 1.67;
+
+    color: getColor(text-price-contacts-color);
+}
