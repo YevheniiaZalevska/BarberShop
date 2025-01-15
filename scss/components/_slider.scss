@@ -1,0 +1,90 @@
+.slider {
+    display: none;
+
+    @media screen and (min-width: getSize(tablet)) {
+        display: block;
+    }
+}
+
+.slider__controls {
+    @extend %list;
+
+    @media screen and (min-width: getSize(tablet)) {
+        position: absolute;
+        bottom: 40px;
+        right: 36px;
+        display: flex;
+        align-items: center;
+    }
+
+    @media screen and (min-width: getSize(desktop)) {
+        right: 60px;
+    }
+}
+
+.slider__item-controls {
+    margin-right: 26px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.slider__btn {
+    width: 60px;
+    height: 24px;
+    padding: 0;
+
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    text-align: right;
+    letter-spacing: 0.1em;
+
+    color: getColor(secondary);
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid getColor(secondary);
+    cursor: pointer;
+
+    &--disable {
+        text-align: left;
+
+        color: getColor(btn-dis);
+        border-color: getColor(btn-dis);
+    }
+}
+
+.slider__pagination {
+    @extend %list;
+
+    @media screen and (min-width: getSize(tablet)) {
+        position: absolute;
+        top: 50%;
+        right: 36px;
+        transform: translateY(-50%);
+        flex-direction: column;
+        width: 18px;
+    }
+
+    @media screen and (min-width: getSize(desktop)) {
+        right: 60px;
+    }
+}
+
+.slider__item {
+    margin-left: auto;
+    margin-bottom: 12px;
+    width: 8px;
+    height: 2px;
+    background-color: getColor(text-price-contacts-color);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &--active {
+        width: 100%;
+        background-color: getColor(secondary);
+    }
+}
